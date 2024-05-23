@@ -1,0 +1,6 @@
+{
+  "habits": [
+    { "id": 1, "name": "Exercise", "startedAt": "2024-05-23", "isActive": true },
+    { "id": 2, "name": "Read", "startedAt": "2024-05-20", "isActive": false }
+  ]
+}
