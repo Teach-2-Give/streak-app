@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #ff7043;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 200px; /* Set a fixed height for proper centering */
+}
+
+.phone-image img {
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.add-icon img {
+    width: 50px; /* Adjust as needed */
+    filter: invert(1) grayscale(1) brightness(9); /* This will make the icon white */
+}
+.welcome-text {
+    margin: 0;
+}
+
+
+.activities {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 240px; /* Adjust this value to control the space */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.activities h2 {
+    margin-bottom: 20px;
+}
+
+.activity-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.activity {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 150px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 2s; /* Updated duration to 2s */
+}
+
+.activity img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.activity p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+.activity:hover {
+    background-color: #ff7043;
+    color: white;
+    transform: rotate(360deg);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+        text-align: center;
+        height: auto; /* Allow height to adjust based on content */
+    }
+    
+    .phone-image img {
+        position: static;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .welcome-text {
+        padding-top: 20px;
+    }
+
+    .activities {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .activity-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activity {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .phone-image img {
+        width: 150px;
+    }
+
+    .welcome-text h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .activity-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone-image img {
+        width: 150px;
+    }
+
+    .welcome-text h1 {
+        font-size: 24px;
+    }
+
+    .activity:hover {
+        background-color: #ff7043;
+        color: white;
+        transform: rotate(360deg);
+    }
+}
