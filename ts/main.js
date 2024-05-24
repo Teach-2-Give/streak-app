@@ -25,6 +25,15 @@ function fetchAndDisplayActivities() {
             var activityDiv = document.createElement('div');
             activityDiv.className = 'activity';
 
+            if (activity.name === 'Stop-Eating') {
+                var icon = document.createElement('img');
+                icon.src = 'https://cdn-icons-png.flaticon.com/512/2819/2819194.png';
+                icon.alt = 'Anything Eatable';
+                icon.style.height = '30px';
+                icon.style.width = '30px';
+                activityDiv.appendChild(icon);
+            }
+
             var pName = document.createElement('p');
             pName.textContent = activity.name;
             pName.style.fontWeight = 'bold';
@@ -49,7 +58,11 @@ function fetchAndDisplayActivities() {
 
             var pStartDate = document.createElement('p');
 
-            
+            /*
+             Check if the activity name is "Stop-Eating"
+             If it is, display "I am yet to start" instead of the start date: 
+             I don't think it makes sense.
+            */
             if (activity.name === 'Stop-Eating') {
                 pStartDate.textContent = "I am yet to start";
             } else {
@@ -69,7 +82,6 @@ function fetchAndDisplayActivities() {
 
 document.addEventListener('DOMContentLoaded', fetchAndDisplayActivities);
 
-
 var nameError = document.createElement('p');
 nameError.style.color = 'red';
 var nameInput = document.querySelector('#activityName');
@@ -79,7 +91,6 @@ var startDateError = document.createElement('p');
 startDateError.style.color = 'red';
 var startDateInput = document.querySelector('#startDate');
 startDateInput.parentNode.insertBefore(startDateError, startDateInput.nextSibling);
-
 
 nameInput.addEventListener('focus', function() {
     nameError.textContent = '';
@@ -95,10 +106,8 @@ document.querySelector('#activityForm form').addEventListener('submit', function
     var name = nameInput.value;
     var startDate = startDateInput.value;
 
-
     nameError.textContent = '';
     startDateError.textContent = '';
-
 
     if (!name) {
         nameError.textContent = 'This field is required';
