@@ -35,14 +35,27 @@ function fetchAndDisplayActivities() {
             var currentDate = new Date();
             var startDateObj = new Date(activity.startDate);
             var diffTime = Math.abs(currentDate - startDateObj);
-            var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+            var diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
+
+            
+            if (activity.name === 'Stop-Eating') {
+                diffDays = 0;
+            }
+
             pCounter.textContent = diffDays;
             pCounter.style.fontSize = '70px';
             pCounter.style.fontWeight = 'bold';
             activityDiv.appendChild(pCounter);
 
             var pStartDate = document.createElement('p');
-            pStartDate.textContent = activity.startDate;
+
+            
+            if (activity.name === 'Stop-Eating') {
+                pStartDate.textContent = "I am yet to start";
+            } else {
+                pStartDate.textContent = activity.startDate;
+            }
+
             pStartDate.style.fontWeight = 'bold';
             activityDiv.appendChild(pStartDate);
 

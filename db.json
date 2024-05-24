@@ -1,19 +1,9 @@
 {
   "habits": [
     {
-      "id": "49dd",
-      "name": "Swimming",
-      "startDate": "2024-05-31"
-    },
-    {
       "id": "eab9",
       "name": "Stop-Eating",
       "startDate": "2024-05-24"
-    },
-    {
-      "id": "d658",
-      "name": "Double",
-      "startDate": "2024-05-29"
     }
   ]
 }
