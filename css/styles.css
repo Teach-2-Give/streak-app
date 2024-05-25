@@ -63,7 +63,7 @@ body {
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 2s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .activity img {
@@ -81,7 +81,8 @@ body {
 .activity:hover {
     background-color: #ff7043;
     color: white;
-    transform: rotate(360deg);
+    transform: translateY(-20px);
+    transition-duration: 0.1s;
 }
 .activity-buttons {
     display: flex;
@@ -99,6 +100,7 @@ body {
     cursor: pointer;
     margin-left: 250px
 }
+
 
 .edit-activity {
     background-color: white;
@@ -156,13 +158,15 @@ body {
 .counter:hover {
     color: white;
 }
+
+
+
 input {
     border: 2px solid;
     border-color: #ff7043;
      border-radius: 8px;
      height: 40px;
 }
-
 
 .cancel-button {
     position: absolute;
@@ -172,6 +176,7 @@ input {
     border: none;
     font-size: 20px;
     cursor: pointer;
+    color: #ff7043;
 }
 .submit-button {
     background-color: #ff7043;
